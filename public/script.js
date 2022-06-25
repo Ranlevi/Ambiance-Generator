@@ -1,9 +1,9 @@
-// import * as Tone from 'tone';
-
 let btn = document.getElementById("button");
 
-let osc = new Tone.Oscillator();
-osc.connect(Tone.Master);
+let osc = new Tone.Oscillator.toDestination();
+// osc.connect(Tone.Master);
+// osc.toDestination();
+osc.volume.value = -12;
 
 btn.addEventListener('click', async () => {
   await osc.start();
